@@ -1,0 +1,536 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 3,
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.editor.tabSizing": "shrink",
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#00000088",
+        "statusBarItem.remoteBackground": "#98c379",
+        "statusBarItem.remoteForeground": "#000000",
+        "statusBar.foreground": "#ffffff",
+        "editor.lineHighlightBackground": "#62616d4a",
+        "editor.background": "#222832",
+        "sideBar.background": "#1e2229",
+        "list.hoverBackground": "#62616d4a"
+    },
+    "editor.lineNumbers": "relative",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "string.quoted.single.json.comments",
+                "settings": {
+                    "foreground": "#a3dc7ae7"
+                }
+            },
+            {
+                "scope": "string.quoted.double.json.comments",
+                "settings": {
+                    "foreground": "#a3dc7ae7"
+                }
+            },
+            {
+                "scope": "support.type.property-name.json.comments",
+                "settings": {
+                    "foreground": "#e85e69"
+                }
+            },
+            //?   JavaScript, React, TS  			
+            {
+                "scope": "string.quoted.single.js",
+                "settings": {
+                    "foreground": "#a3dc7ae7"
+                }
+            },
+            {
+                "scope": "string.quoted.double.js",
+                "settings": {
+                    "foreground": "#a3dc7ae7"
+                }
+            },
+            {
+                "scope": "constant.language.boolean.false.js",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            
+            {
+                "scope": "meta.object-literal.key.ts",
+                "settings": {
+                    "foreground": "#D19A66"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.ts",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "constant.language.null.js",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "storage.modifier.async.js.jsx",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "constant.language.boolean.false.tsx",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "constant.language.boolean.true.tsx",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "constant.numeric.decimal.tsx",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "variable.object.property.tsx",
+                "settings": {
+                    "foreground": "#D19A66"
+                }
+            },
+            {
+                "scope": "support.type.primitive.tsx",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "entity.name.type.tsx",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.js.jsx",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "constant.language.null.js.jsx",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "keyword.operator.assignment.tsx",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "keyword.operator.ternary.js",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "constant.language.boolean.false.js.jsx",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "constant.language.boolean.true.js",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "keyword.operator.arithmetic.js.jsx",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "storage.type.function.js",
+                "settings": {
+                  
+                }
+            },
+            {
+                "scope": "constant.numeric.decimal.js",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "storage.modifier.js.jsx",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage.type.class.js.jsx",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage.type.js.jsx",
+                "settings": {
+                    // "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "variable.language.super.js.jsx",
+                "settings": {
+                    "foreground": "#56B6C2"
+                }
+            },
+            {
+                "scope": "meta.array-binding-pattern-variable.js",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.tsx",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "keyword.operator.assignment.js",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "keyword.operator.comparison.js",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "meta.export.default.js",
+                "settings": {
+                    "foreground": "#61AFEF"
+                }
+            },
+            {
+                "scope": "keyword.control.default.js",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "support.class.component.js",
+                "settings": {
+                    "foreground": "#4edc80ca"
+                }
+            },
+            {
+                "scope": "keyword.control.as.js",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            },
+            {
+                "scope": "variable.other.property.js",
+                "settings": {
+                    "foreground": "#D19A66"
+                }
+            },
+            {
+                "scope": "meta.object-literal.key.js",
+                "settings": {
+                    "foreground": "#D19A66"
+                }
+            },
+            {
+                "scope": "variable.language.this.js",
+                "settings": {
+                    "foreground": "#E5C07B"
+                }
+            },
+            {
+                "scope": "variable.other.object.property.js",
+                "settings": {
+                    "foreground": "#D19A66"
+                }
+            },
+            {
+                "scope": "support.variable.property.js",
+                "settings": {
+                    "foreground": "#D19A66",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "keyword.operator.expression.delete.js",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "meta.brace.square.js",
+                "settings": {
+                    "foreground": "#ffd500e3"
+                }
+            },
+            {
+                "scope": "keyword.control.trycatch.js",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "variable.other.constant.js",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.alias.js",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.alias.tsx",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "variable.other.constant.tsx",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "variable.other.object.tsx",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "variable.language.this.ts",
+                "settings": {
+                    "foreground": "#17cbb6e7",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "keyword.control.trycatch.ts",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "variable.other.constant.ts",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "meta.brace.square.ts",
+                "settings": {
+                    "foreground": "#ffd500e3"
+                }
+            },
+            {
+                "scope": "variable.other.object.property.ts",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "support.variable.property.ts",
+                "settings": {
+                    "foreground": "#f4acffd9"
+                }
+            },
+            //?---------------------- Python   
+            {
+                "scope": "string.quoted.single.python",
+                "settings": {
+                    "foreground": "#a0dd75e7"
+                }
+            },            
+            {
+                "scope": "meta.function-call.generic.python",
+                "settings": {
+                    "foreground": "#61AFEF"
+                }
+            },
+            {
+                "scope": "meta.attribute.python",
+                "settings": {
+                    "foreground": "#D19A66"
+                }
+            },
+            {
+                "scope": "variable.parameter.function.language.special.self.python",
+                "settings": {
+                    "foreground": "#E5C07B",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "variable.language.special.self.python",
+                "settings": {
+                    "foreground": "#E5C07B",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "entity.name.function.decorator.python",
+                "settings": {
+                    "foreground": "#64d1bfdb",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "meta.function.parameters.python",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "entity.other.inherited-class.python",
+                "settings": {
+                    "foreground": "#ABB2BF"
+                }
+            },
+            {
+                "scope": "storage.type.function.python",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+
+            {
+                "scope": "constant.numeric.dec.python",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "constant.other.caps.python",
+                "settings": {
+                    "foreground": "#f97171d9"
+                }
+            },
+            {
+                "scope": "constant.language.python",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            //?   DockerFile
+            {
+                "scope": "keyword.other.special-method.dockerfile",
+                "settings": {
+                    "foreground": "#C678DD"
+                }
+            }
+        ]
+    },
+    "editor.wordWrap": "on",
+    "editor.renderLineHighlight": "line",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line",
+    
+    "terminal.integrated.rightClickBehavior": "paste",
+    "editor.inlineSuggest.enabled": true,
+    // Controls if quick suggestions should show up while typing
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    // Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions. The value 'smart' means only accept a suggestion with Enter when it makes a textual change
+    "editor.acceptSuggestionOnEnter": "on",
+    // Controls the delay in ms after which quick suggestions will show up.
+    "editor.quickSuggestionsDelay": 10,
+    // Controls if suggestions should automatically show up when typing trigger characters
+    "editor.suggestOnTriggerCharacters": true,
+    // Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions
+    "editor.tabCompletion": "on",
+    // Controls whether sorting favours words that appear close to the cursor
+    "editor.suggest.localityBonus": true,
+    // Controls how suggestions are pre-selected when showing the suggest list
+    "editor.suggestSelection": "first",
+    // Enable word based suggestions
+    "editor.wordBasedSuggestions": true,
+    // Enable parameter hints
+    "editor.parameterHints.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "450",
+    
+    "remote.WSL1.connectionMethod": "wslExeProxy",
+    "remote.downloadExtensionsLocally": true,
+    "editor.codeLensFontSize": 11,
+    "editor.fontSize": 12,
+    "terminal.integrated.fontSize": 13,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    
+    "editor.detectIndentation": false,
+    
+    "editor.snippetSuggestions": "bottom",
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "files.associations": {
+        "*.html": "html"
+    },
+    "http.proxyAuthorization": null,
+    "http.proxyStrictSSL": true,
+    "emmet.includeLanguages": {},
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ],
+    "editor.guides.bracketPairs": true,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.guides.bracketPairsHorizontal": false,
+
+    "python.autoComplete.extraPaths": [],
+    "python.languageServer": "Pylance",
+    "python.analysis.extraPaths": [
+        "./sources"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": false,
+    "python.linting.pylintEnabled": true,
+    "workbench.statusBar.visible": true,
+    "workbench.layoutControl.enabled": false,
+    "window.menuBarVisibility": "compact",
+    "extensions.ignoreRecommendations": true,
+    
+
+        
+}   
