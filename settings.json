@@ -1,35 +1,74 @@
 {
+    /* Python Type Hinting and Linting */
+    "python.languageServer": "Pylance",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "autoDocstring.docstringFormat": "sphinx-notypes",
+    "python.autoComplete.extraPaths": [],
+    "python.analysis.extraPaths": ["./sources"],
+    /* WSL settings */ 
+    "remote.WSL1.connectionMethod": "wslExeProxy",
+    "remote.downloadExtensionsLocally": true,
+    "http.proxyAuthorization": null,
+    "http.proxyStrictSSL": true,
+    /*Explorer */
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": false,
+    /* Terminal */ 
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.fontFamily": "MesloLGS NF Regular",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    /* Workbenc & Editor customization */
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 3,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.tabSizing": "shrink",
-    "[javascript]": {
-        "editor.tabSize": 4,
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
+    "workbench.statusBar.visible": true,
+    "workbench.layoutControl.enabled": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#00000088",
-        "statusBarItem.remoteBackground": "#98c379",
+        "statusBar.background": "#2c3441",
+        "statusBarItem.remoteBackground": "#8eb473",
         "statusBarItem.remoteForeground": "#000000",
         "statusBar.foreground": "#ffffff",
         "editor.lineHighlightBackground": "#62616d4a",
-        "editor.background": "#222832",
+        "editor.background": "#252a34",
         "sideBar.background": "#1e2229",
-        "list.hoverBackground": "#62616d4a"
+        "list.hoverBackground": "#62616d4a",
+        "editorCursor.foreground": "#fff",
+        "editorLineNumber.activeForeground": "#efe637",
+        "editorLineNumber.foreground": "#ffffff7f"
     },
+    "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.lineNumbers": "relative",
+    "editor.wordWrap": "on",
+    "editor.renderLineHighlight": "line",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line-thin",
+    "editor.detectIndentation": false,
+    "editor.snippetSuggestions": "bottom",
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "450",
+    "editor.fontFamily": "Fira Code",
+    "editor.codeLensFontSize": 11,
+    "editor.fontSize": 12,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
                 "scope": "string.quoted.single.json.comments",
                 "settings": {
-                    "foreground": "#a3dc7ae7"
+                    "foreground": "#a0dd75e7"
                 }
             },
             {
                 "scope": "string.quoted.double.json.comments",
                 "settings": {
-                    "foreground": "#a3dc7ae7"
+                    "foreground": "#a0dd75e7"
                 }
             },
             {
@@ -38,17 +77,53 @@
                     "foreground": "#e85e69"
                 }
             },
-            //?   JavaScript, React, TS  			
+            //?   JavaScript, React, TS  	  
+            {
+                "scope": "constant.language.undefined.js",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "constant.language.boolean.true.ts",
+                "settings": {
+                    "foreground": "#1df5b8c1"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.alias.ts",
+                "settings": {
+                    "foreground": "#b5bbc7"
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.alias.js.jsx",
+                "settings": {
+                    "foreground": "#b5bbc7"
+                }
+            },
+            {
+                "scope": "string.template.js.jsx",
+                "settings": {
+                    "foreground": "#a0dd75e7"
+                }
+            },
             {
                 "scope": "string.quoted.single.js",
                 "settings": {
-                    "foreground": "#a3dc7ae7"
+                    "foreground": "#a0dd75e7"
+                }
+            },
+            {
+                "scope": "string.quoted.single.js.jsx",
+                "settings": {
+                    "foreground": "#a0dd75e7"
                 }
             },
             {
                 "scope": "string.quoted.double.js",
                 "settings": {
-                    "foreground": "#a3dc7ae7"
+                    "foreground": "#a0dd75e7"
                 }
             },
             {
@@ -57,7 +132,6 @@
                     "foreground": "#f97171d9"
                 }
             },
-            
             {
                 "scope": "meta.object-literal.key.ts",
                 "settings": {
@@ -162,9 +236,7 @@
             },
             {
                 "scope": "storage.type.function.js",
-                "settings": {
-                  
-                }
+                "settings": {}
             },
             {
                 "scope": "constant.numeric.decimal.js",
@@ -281,12 +353,12 @@
                     "foreground": "#f97171d9"
                 }
             },
-            {
-                "scope": "meta.brace.square.js",
-                "settings": {
-                    "foreground": "#ffd500e3"
-                }
-            },
+            // {
+            //     "scope": "meta.brace.square.js",
+            //     "settings": {
+            //         "foreground": "#ffd500e3"
+            //     }
+            // },
             {
                 "scope": "keyword.control.trycatch.js",
                 "settings": {
@@ -342,12 +414,12 @@
                     "foreground": "#ABB2BF"
                 }
             },
-            {
-                "scope": "meta.brace.square.ts",
-                "settings": {
-                    "foreground": "#ffd500e3"
-                }
-            },
+            // {
+            //     "scope": "meta.brace.square.ts",
+            //     "settings": {
+            //         "foreground": "#ffd500e3"
+            //     }
+            // },
             {
                 "scope": "variable.other.object.property.ts",
                 "settings": {
@@ -360,13 +432,43 @@
                     "foreground": "#f4acffd9"
                 }
             },
-            //?---------------------- Python   
+            //?---------------------- Python    	
+            {
+                "scope": "meta.indexed-name.python",
+                "settings": {
+                    "foreground": "#fd6d6df7"
+                }
+            },
+            {
+                "scope": "string.quoted.docstring.multi.python",
+                "settings": {
+                    "foreground": "#a0dd75e7"
+                }
+            },
+            {
+                "scope": "punctuation.definition.string.begin.python",
+                "settings": {
+                    "foreground": "#a0dd75e7"
+                }
+            },
+            {
+                "scope": "variable.parameter.function.language.python",
+                "settings": {
+                    "foreground": "#b5bbc7"
+                }
+            },
+            {
+                "scope": "source.python",
+                "settings": {
+                    "foreground": "#b5bbc7"
+                }
+            },
             {
                 "scope": "string.quoted.single.python",
                 "settings": {
                     "foreground": "#a0dd75e7"
                 }
-            },            
+            },
             {
                 "scope": "meta.function-call.generic.python",
                 "settings": {
@@ -418,7 +520,6 @@
                     "fontStyle": "italic"
                 }
             },
-
             {
                 "scope": "constant.numeric.dec.python",
                 "settings": {
@@ -428,7 +529,7 @@
             {
                 "scope": "constant.other.caps.python",
                 "settings": {
-                    "foreground": "#f97171d9"
+                    "foreground": "#ABB2BF"
                 }
             },
             {
@@ -446,91 +547,58 @@
             }
         ]
     },
-    "editor.wordWrap": "on",
-    "editor.renderLineHighlight": "line",
-    "editor.cursorBlinking": "solid",
-    "editor.cursorStyle": "line",
-    
-    "terminal.integrated.rightClickBehavior": "paste",
-    "editor.inlineSuggest.enabled": true,
-    // Controls if quick suggestions should show up while typing
+    /* Hinting and suggestion */ 
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
         "strings": false
     },
-    // Controls whether suggestions should be accepted on commit characters. For example, in JavaScript, the semi-colon (`;`) can be a commit character that accepts a suggestion and types that character.
+    "editor.inlineSuggest.enabled": true,
     "editor.acceptSuggestionOnCommitCharacter": true,
-    // Controls if suggestions should be accepted on 'Enter' - in addition to 'Tab'. Helps to avoid ambiguity between inserting new lines or accepting suggestions. The value 'smart' means only accept a suggestion with Enter when it makes a textual change
     "editor.acceptSuggestionOnEnter": "on",
-    // Controls the delay in ms after which quick suggestions will show up.
     "editor.quickSuggestionsDelay": 10,
-    // Controls if suggestions should automatically show up when typing trigger characters
     "editor.suggestOnTriggerCharacters": true,
-    // Controls if pressing tab inserts the best suggestion and if tab cycles through other suggestions
     "editor.tabCompletion": "on",
-    // Controls whether sorting favours words that appear close to the cursor
     "editor.suggest.localityBonus": true,
-    // Controls how suggestions are pre-selected when showing the suggest list
     "editor.suggestSelection": "first",
-    // Enable word based suggestions
     "editor.wordBasedSuggestions": true,
-    // Enable parameter hints
     "editor.parameterHints.enabled": false,
-    "editor.minimap.enabled": false,
-    "editor.fontLigatures": true,
-    "editor.fontWeight": "450",
+   
     
-    "remote.WSL1.connectionMethod": "wslExeProxy",
-    "remote.downloadExtensionsLocally": true,
-    "editor.codeLensFontSize": 11,
-    "editor.fontSize": 12,
-    "terminal.integrated.fontSize": 13,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.compactFolders": false,
-    
-    "editor.detectIndentation": false,
-    
-    "editor.snippetSuggestions": "bottom",
+   
     "files.autoSave": "afterDelay",
-    "editor.fontFamily": "Fira Code",
-    "terminal.integrated.fontFamily": "Fira Code",
     "files.associations": {
         "*.html": "html"
     },
-    "http.proxyAuthorization": null,
-    "http.proxyStrictSSL": true,
-    "emmet.includeLanguages": {},
     "errorLens.enabledDiagnosticLevels": [
         "error",
         "warning"
     ],
-    "editor.guides.bracketPairs": true,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[javascriptreact]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    
+    "extensions.ignoreRecommendations": true,
+    "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "vsicons.dontShowNewVersionMessage": true,
-    "editor.guides.bracketPairsHorizontal": false,
-
-    "python.autoComplete.extraPaths": [],
-    "python.languageServer": "Pylance",
-    "python.analysis.extraPaths": [
-        "./sources"
-    ],
-    "python.linting.flake8Enabled": true,
-    "python.linting.enabled": false,
-    "python.linting.pylintEnabled": true,
-    "workbench.statusBar.visible": true,
-    "workbench.layoutControl.enabled": false,
     "window.menuBarVisibility": "compact",
-    "extensions.ignoreRecommendations": true,
-    
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
-        
-}   
+    // 
+    "redhat.telemetry.enabled": true,
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "cmake.cmakePath": "/usr/bin/cmake",
+    "cmake.configureOnOpen": true,
+    
+}
