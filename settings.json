@@ -12,6 +12,7 @@
     "python.analysis.extraPaths": ["./sources"],
     "python.linting.flake8Args": [
         "--max-line-length=110",
+        "--ignore=E227"
         // "--ignore=E402,F841,F401,E302,E305",
     ],
     /* WSL settings */ 
@@ -24,7 +25,7 @@
     "explorer.compactFolders": false,
     /* Terminal */ 
     "terminal.integrated.rightClickBehavior": "paste",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 11,
     "terminal.integrated.fontFamily": "MesloLGS NF Regular",
     "terminal.integrated.defaultProfile.linux": "zsh",
     /* Workbenc & Editor customization */
@@ -42,7 +43,7 @@
         "statusBarItem.remoteBackground": "#8ac362",
         "statusBarItem.remoteForeground": "#000000",
         "editor.lineHighlightBackground": "#62616d4a",
-        "editor.background": "#272a31",
+        "editor.background": "#2a3039",
         "sideBar.background": "#1e2229",
         "list.hoverBackground": "#62616d4a",
         "editorCursor.foreground": "#fff",
@@ -66,6 +67,40 @@
     "editor.fontSize": 12,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
+            //* С   
+
+            {
+                "scope":"string.quoted.double.c",
+                "settings": {
+                    "foreground": "#a0dd75e7",
+                },
+            },
+            {
+                "scope": "meta.block.c",
+                "settings": {
+                    "foreground": "#b5bbc7",
+                }
+            },
+            {
+                "scope": "source.c",
+                "settings": {
+                    "foreground": "#b5bbc7",
+                }
+            },
+            {
+                "scope": "variable.other.object.access.c",
+                "settings": {
+                    "foreground": "#b5bbc7",
+                }
+            },
+            {
+                "scope": "variable.other.member.c",
+                "settings": {
+                    "foreground": "#D19A66",
+                }
+            },
+
+            //* JSON
             {
                 "scope": "string.quoted.single.json.comments",
                 "settings": {
@@ -84,7 +119,7 @@
                     "foreground": "#e85e69"
                 }
             },
-            //?   JavaScript, React, TS  	  
+            //*  JavaScript, React, TS  	  
             {
                 "scope": "constant.language.undefined.js",
                 "settings": {
@@ -573,8 +608,6 @@
     "editor.wordBasedSuggestions": true,
     "editor.parameterHints.enabled": false,
    
-    
-   
     "files.autoSave": "afterDelay",
     "files.associations": {
         "*.html": "html"
@@ -589,6 +622,9 @@
     "[javascriptreact]": {
         "editor.tabSize": 4,
     },
+    "[c]": {
+        "editor.tabSize": 4
+    },
     
     "extensions.ignoreRecommendations": true,
     "[typescript]": {
@@ -598,13 +634,15 @@
 
     // 
     "redhat.telemetry.enabled": true,
-    "C_Cpp.intelliSenseEngine": "Default",
-    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
     "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
-    "C_Cpp.enhancedColorization": "Disabled",
+    "C_Cpp.enhancedColorization": "disabled",
     "cmake.cmakePath": "/usr/bin/cmake",
     "cmake.configureOnOpen": true,
     "window.menuBarVisibility": "compact",
     "editor.suggest.localityBonus": true,
-    
+    "editor.accessibilitySupport": "off",
+    "window.restoreFullscreen": true,
+    "cSpell.language": "en,ru",
 }
