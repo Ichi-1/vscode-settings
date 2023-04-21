@@ -1,29 +1,49 @@
 {
-    /* Python Type Hinting and Linting */
+    /* Python Code Quality settings*/
+    "[python]": {
+        // "editor.defaultFormatter": "ms-python.black-formatter",
+        // "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": false
+        },
+        "editor.formatOnType": false,
+    },
     "python.languageServer": "Pylance",
-    "python.analysis.inlayHints.functionReturnTypes": true,
-    "python.analysis.inlayHints.variableTypes": true,
-    "python.analysis.typeCheckingMode": "basic",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.maxNumberOfProblems": 20,
-    "autoDocstring.docstringFormat": "sphinx-notypes",
-    "python.autoComplete.extraPaths": [],
-    "python.analysis.extraPaths": ["./sources"],
-    "python.linting.flake8Args": [
-        "--max-line-length=110",
-        "--ignore=E227"
-        // "--ignore=E402,F841,F401,E302,E305",
+    "python.analysis.extraPaths": [
+        "./sources"
     ],
-    /* WSL settings */ 
-    "remote.WSL1.connectionMethod": "wslExeProxy",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.maxNumberOfProblems": 100,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.ignorePatterns": [
+        "**/site-packages/**/*.py",
+        ".vscode/*.py",
+        "migrations/*",
+        "venv/"
+    ],
+    "python.linting.flake8Args": [
+        "--max-line-length=100",
+        "--ignore=D100,D107,D400"
+    ],
+    "python.linting.pylintArgs": [
+        "--max-line-length=100",
+        "--disable=C0114,E0401,R0903",
+    ],
+    "python.autoComplete.extraPaths": [],
+    "autoDocstring.docstringFormat": "sphinx-notypes",
+    /* WSL settings */
     "remote.downloadExtensionsLocally": true,
     "http.proxyAuthorization": null,
     "http.proxyStrictSSL": true,
     /*Explorer */
     "explorer.confirmDragAndDrop": false,
     "explorer.compactFolders": false,
-    /* Terminal */ 
+    /* Terminal */
     "terminal.integrated.rightClickBehavior": "paste",
     "terminal.integrated.fontSize": 11,
     "terminal.integrated.fontFamily": "MesloLGS NF Regular",
@@ -32,7 +52,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 3,
     "workbench.colorTheme": "Atom One Dark",
-    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.tabSizing": "fit",
     "workbench.statusBar.visible": true,
     "workbench.layoutControl.enabled": false,
     "workbench.colorCustomizations": {
@@ -48,7 +68,9 @@
         "list.hoverBackground": "#62616d4a",
         "editorCursor.foreground": "#fff",
         "editorLineNumber.activeForeground": "#efe637",
-        "editorLineNumber.foreground": "#ffffff7f"
+        "editorLineNumber.foreground": "#ffffff7f",
+        "editor.selectionHighlightBackground": "#e9e6e653",
+        "editor.selectionHighlightForeground": "#0d0d0d"
     },
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.lineNumbers": "relative",
@@ -68,9 +90,8 @@
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             //* С   
-
             {
-                "scope":"string.quoted.double.c",
+                "scope": "string.quoted.double.c",
                 "settings": {
                     "foreground": "#a0dd75e7",
                 },
@@ -99,7 +120,6 @@
                     "foreground": "#D19A66",
                 }
             },
-
             //* JSON
             {
                 "scope": "string.quoted.single.json.comments",
@@ -589,14 +609,12 @@
             }
         ]
     },
-    "editor.semanticTokenColorCustomizations": {
-        
-    },
-    /* Hinting and suggestion */ 
+    "editor.semanticTokenColorCustomizations": {},
+    /* Hinting and suggestion */
     "editor.quickSuggestions": {
         "other": true,
         "comments": false,
-        "strings": false
+        "strings": true
     },
     "editor.inlineSuggest.enabled": true,
     "editor.acceptSuggestionOnCommitCharacter": true,
@@ -606,32 +624,17 @@
     "editor.tabCompletion": "on",
     "editor.suggestSelection": "first",
     "editor.wordBasedSuggestions": true,
-    "editor.parameterHints.enabled": false,
-   
+    "editor.parameterHints.enabled": true,
     "files.autoSave": "afterDelay",
     "files.associations": {
         "*.html": "html"
     },
+    "extensions.ignoreRecommendations": true,
     "errorLens.enabledDiagnosticLevels": [
         "error",
         "warning"
     ],
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[javascriptreact]": {
-        "editor.tabSize": 4,
-    },
-    "[c]": {
-        "editor.tabSize": 4
-    },
-    
-    "extensions.ignoreRecommendations": true,
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
     "diffEditor.ignoreTrimWhitespace": false,
-
     // 
     "redhat.telemetry.enabled": true,
     "C_Cpp.intelliSenseEngine": "default",
@@ -645,4 +648,29 @@
     "editor.accessibilitySupport": "off",
     "window.restoreFullscreen": true,
     "cSpell.language": "en,ru",
+    //
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 4,
+    },
+    "[c]": {
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "errorLens.lintFilePaths": {
+        "eslint": [
+            "**/*.eslintrc.{js,cjs,yaml,yml,json}",
+            "**/*package.json"
+        ],
+        "Stylelint": [
+            "**/*.stylelintrc",
+            "**/*.stylelintrc.{cjs,js,json,yaml,yml}",
+            "**/*stylelint.config.{cjs,js}",
+            "**/*package.json"
+        ]
+    },
 }
