@@ -89,6 +89,67 @@
     "editor.fontSize": 12,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
+            //* Go Lang  #61AFEF 
+            {
+                "scope": "constant.language.go",
+                "settings": {
+                    "foreground": "#1DF5B8C1",
+                }
+            },
+            {
+                "scope": "constant.numeric.decimal.go",
+                "settings": {
+                    "foreground": "#1DF5B8C1",
+                }
+            },
+            {
+                "scope": "support.function.go",
+                "settings": {
+                    "foreground": "#61AFEF",
+                }
+            },
+            {
+                "scope": "variable.other.declaration.go",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "variable.other.assignment.go",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "storage.type.rune.go",
+                "settings": {
+                    "foreground": "#56B6C2",
+                }
+            },
+            {
+                "scope": "storage.type.byte.go",
+                "settings": {
+                    "foreground": "#56B6C2",
+                }
+            },
+            {
+                "scope": "storage.type.boolean.go",
+                "settings": {
+                    "foreground": "#56B6C2",
+                }
+            },
+            {
+                "scope": "storage.type.string.go",
+                "settings": {
+                    "foreground": "#56B6C2",
+                }
+            },
+            {
+                "scope": "storage.type.numeric.go",
+                "settings": {
+                    "foreground": "#56B6C2",
+                }
+            },
             //* С   
             {
                 "scope": "string.quoted.double.c",
@@ -672,5 +733,8 @@
             "**/*stylelint.config.{cjs,js}",
             "**/*package.json"
         ]
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
 }
