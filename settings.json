@@ -1,41 +1,35 @@
 {
-    /* Python Code Quality settings*/
+    /* Python */
     "[python]": {
         // "editor.defaultFormatter": "ms-python.black-formatter",
         // "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false
+            "source.organizeImports": "never"
         },
         "editor.formatOnType": false,
+        "editor.rulers": [100],
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+        
     },
     "python.languageServer": "Pylance",
-    "python.analysis.extraPaths": [
-        "./sources"
-    ],
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.inlayHints.variableTypes": false,
-    "python.linting.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.maxNumberOfProblems": 100,
-    "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": false,
-    "python.linting.ignorePatterns": [
-        "**/site-packages/**/*.py",
-        ".vscode/*.py",
-        "migrations/*",
-        "venv/"
-    ],
-    "python.linting.flake8Args": [
-        "--max-line-length=100",
-        "--ignore=D100,D107,D400"
-    ],
-    "python.linting.pylintArgs": [
-        "--max-line-length=100",
-        "--disable=C0114,E0401,R0903",
-    ],
     "python.autoComplete.extraPaths": [],
-    "autoDocstring.docstringFormat": "sphinx-notypes",
+    /* Golang*/ 
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.rulers": [110],
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "go.testTimeout": "10m",
+    "go.inlayHints.constantValues": true,
+    "go.tasks.provideDefault": false,
+    "go.formatTool": "goformat",
+    "go.toolsManagement.autoUpdate": true,
     /* WSL settings */
     "remote.downloadExtensionsLocally": true,
     "http.proxyAuthorization": null,
@@ -45,7 +39,7 @@
     "explorer.compactFolders": false,
     /* Terminal */
     "terminal.integrated.rightClickBehavior": "paste",
-    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontSize": 12,
     "terminal.integrated.fontFamily": "MesloLGS NF Regular",
     "terminal.integrated.defaultProfile.linux": "zsh",
     /* Workbenc & Editor customization */
@@ -62,16 +56,17 @@
         "statusBarItem.hoverBackground": "#87b6aa7a",
         "statusBarItem.remoteBackground": "#8ac362",
         "statusBarItem.remoteForeground": "#000000",
-        "editor.lineHighlightBackground": "#62616d4a",
+        "editor.lineHighlightBackground": "#6d686157",
         "editor.background": "#2a3039",
         "sideBar.background": "#1e2229",
         "list.hoverBackground": "#62616d4a",
         "editorCursor.foreground": "#fff",
         "editorLineNumber.activeForeground": "#efe637",
         "editorLineNumber.foreground": "#ffffff7f",
-        "editor.selectionHighlightBackground": "#e9e6e653",
+        "editor.selectionHighlightBackground": "#e9e6e659",
         "editor.selectionHighlightForeground": "#0d0d0d"
     },
+    /* Editor */
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.lineNumbers": "relative",
     "editor.wordWrap": "on",
@@ -89,7 +84,81 @@
     "editor.fontSize": 12,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
-            //* Go Lang  #61AFEF 
+            // *----- HCL Terraform 
+            {
+                "scope": "variable.other.readwrite.terraform",
+                "settings": {
+                    "foreground": "#61AFEF",
+                }
+            },
+            {
+                "scope": "variable.other.member.hcl",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "entity.name.type.hcl",
+                "settings": {
+                    "foreground": "#61AFEF",
+                }
+            },
+            {
+                "scope": "entity.name.type.terraform",
+                "settings": {
+                    "foreground": "#61AFEF",
+                }
+            },
+            {
+                "scope": "variable.other.readwrite.hcl",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "variable.other.enummember.hcl",
+                "settings": {
+                    "foreground": "#D19A66",
+                }
+            },
+
+            //*------ Go Lang
+            {
+                "scope": "entity.name.type.go",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "variable.other.go",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "variable.other.property.go",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "variable.other.property.field.go",
+                "settings": {
+                    "foreground": "#ABB2BF",
+                }
+            },
+            {
+                "scope": "comment.line.double-slash.go",
+                "settings": {
+                    "foreground": "#abb2bfc6",
+                }
+            },
+            {
+                "scope": "comment.block.go",
+                "settings": {
+                    "foreground": "#87c574e3",
+                }
+            },
             {
                 "scope": "constant.language.go",
                 "settings": {
@@ -106,12 +175,6 @@
                 "scope": "support.function.go",
                 "settings": {
                     "foreground": "#61AFEF",
-                }
-            },
-            {
-                "scope": "variable.other.declaration.go",
-                "settings": {
-                    "foreground": "#ABB2BF",
                 }
             },
             {
@@ -150,7 +213,7 @@
                     "foreground": "#56B6C2",
                 }
             },
-            //* С   
+            //*------ С   
             {
                 "scope": "string.quoted.double.c",
                 "settings": {
@@ -181,7 +244,7 @@
                     "foreground": "#D19A66",
                 }
             },
-            //* JSON
+            //*------ JSON
             {
                 "scope": "string.quoted.single.json.comments",
                 "settings": {
@@ -200,7 +263,7 @@
                     "foreground": "#e85e69"
                 }
             },
-            //*  JavaScript, React, TS  	  
+            //*------  JavaScript, React, TS  	  
             {
                 "scope": "constant.language.undefined.js",
                 "settings": {
@@ -476,12 +539,6 @@
                     "foreground": "#f97171d9"
                 }
             },
-            // {
-            //     "scope": "meta.brace.square.js",
-            //     "settings": {
-            //         "foreground": "#ffd500e3"
-            //     }
-            // },
             {
                 "scope": "keyword.control.trycatch.js",
                 "settings": {
@@ -537,12 +594,6 @@
                     "foreground": "#ABB2BF"
                 }
             },
-            // {
-            //     "scope": "meta.brace.square.ts",
-            //     "settings": {
-            //         "foreground": "#ffd500e3"
-            //     }
-            // },
             {
                 "scope": "variable.other.object.property.ts",
                 "settings": {
@@ -555,7 +606,7 @@
                     "foreground": "#f4acffd9"
                 }
             },
-            //?---------------------- Python    	
+            //*------ Python    	
             {
                 "scope": "meta.indexed-name.python",
                 "settings": {
@@ -661,7 +712,7 @@
                     "foreground": "#1df5b8c1"
                 }
             },
-            //?   DockerFile
+            //*------ DockerFile
             {
                 "scope": "keyword.other.special-method.dockerfile",
                 "settings": {
@@ -684,7 +735,7 @@
     "editor.suggestOnTriggerCharacters": true,
     "editor.tabCompletion": "on",
     "editor.suggestSelection": "first",
-    "editor.wordBasedSuggestions": true,
+    "editor.wordBasedSuggestions": "matchingDocuments",
     "editor.parameterHints.enabled": true,
     "files.autoSave": "afterDelay",
     "files.associations": {
@@ -695,21 +746,9 @@
         "error",
         "warning"
     ],
-    "diffEditor.ignoreTrimWhitespace": false,
-    // 
-    "redhat.telemetry.enabled": true,
-    "C_Cpp.intelliSenseEngine": "default",
-    "C_Cpp.intelliSenseEngineFallback": "enabled",
-    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
-    "C_Cpp.enhancedColorization": "disabled",
-    "cmake.cmakePath": "/usr/bin/cmake",
-    "cmake.configureOnOpen": true,
-    "window.menuBarVisibility": "compact",
     "editor.suggest.localityBonus": true,
     "editor.accessibilitySupport": "off",
     "window.restoreFullscreen": true,
-    "cSpell.language": "en,ru",
-    //
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -737,4 +776,18 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
+    "sonarlint.rules": {
+        "go:S1192": {
+            "level": "off"
+        }
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.external.linuxExec": "",
+    "python.analysis.extraPaths": [],
+    "git.confirmSync": false,
+    "redhat.telemetry.enabled": false,
+    "remote.SSH.remotePlatform": {},
+    "remote.autoForwardPortsSource": "hybrid",
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
 }
